@@ -28,7 +28,7 @@
                         <a class="nav-link" href="resume.html">Resume</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="activities.html">Projects</a>
+                        <a class="nav-link" href="activities.html">Activities</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -36,9 +36,10 @@
                             Contacts
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">LinkedIn</a></li>
-                            <li><a class="dropdown-item" href="#">Github</a></li>
-                            <li><a class="dropdown-item" href="#">Facebook</a></li>
+                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/rchllvelasco/">LinkedIn</a>
+                            </li>
+                            <li><a class="dropdown-item" href="https://github.com/itschellay">Github</a></li>
+                            <li><a class="dropdown-item" href="https://facebook.com/rochellevlsc">Facebook</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -58,21 +59,22 @@
     <script>
         var content = document.getElementById("content");
 
+
         for (var i = 0; i < activities.length; i++) {
+            var link = "https://itschellay.github.io/" + activities[i].repo + "/";
             content.innerHTML += `
-                    <div class="col-6 col-md-4 col-lg-3">
-                        <div class="card shadow rounded-3 my-4 p-2 w-100 h-100 overflow-hidden">
-                            <img src="`+ activities[i].picture + `" class="img-top">
-                            <div class="card-body">
-                                <h3 class="card-title"> `+ activities[i].title + ` </h3>
-                                <p class="description">
-                                    `+ activities[i].description + `
-                                </p>
-                                <a href="https://itschellay.github.io/`+ activities[i].repo + `" class="btn btn-primary">Open</a>
-                            </div>
-                        </div>
-                    </div>`
-        };
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+                    <div class="card my-3 rounded-3 overflow-hidden">
+                        <embed type="text/html" src="` + link + `" width="100%" height="200px">
+                        <div class="card-body shadow-lg">
+                        <h6 class="card-title">` + activities[i].title + `</h6>
+                        <p class="card-text text-body-secondary">` + activities[i].description + `</p>
+                        <a href="` + link + `" alt="` + activities[i].title + `" class="btn btn-primary">Open</a>
+                         </div>
+                    </div>
+                    </div>
+                `;
+        }
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
