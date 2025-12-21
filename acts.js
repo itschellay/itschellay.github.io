@@ -16,7 +16,7 @@ var activities = [
         "description": "Create an HTML website that contains some form of gallery. It can be about anything.",
         "repo": "gallery",
         "picture": "images/gallery.png"
-    }
+    },
     {
         "title": "Activity 7",
         "description": "Create an HTML website that fetch data from open APIs.",
