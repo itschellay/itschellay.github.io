@@ -17,4 +17,10 @@ var activities = [
         "repo": "gallery",
         "picture": "images/gallery.png"
     }
+    {
+        "title": "Activity 7",
+        "description": "Create an HTML website that fetch data from open APIs.",
+        "repo": "dragonballz",
+        "picture": "images/dragonballz.png"
+    }
 ]
