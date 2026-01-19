@@ -22,10 +22,11 @@
     }
 
     .background {
-        background-image: url('https://images.unsplash.com/photo-1494500764479-0c8f2919a3d8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGxhbmRzY2FwZSUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D');
-        background-size: cover;
-        background-position: center;
-        height: 590px;
+        background-image: url('images/me.png');
+        background-position: 75% center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 553px;
         width: 100%;
     }
 
@@ -33,56 +34,31 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-md bg-body-tertiary">
-        <div class="container-fluid p-1">
-            <a class="rvLogo" href="index.html">
-                <img src="images/Velasco_LogoB.svg" alt="RV" width="50" height="35">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse ms-5 " id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="resume.html">Resume</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="activities.html">Activities</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Contacts
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="https://www.linkedin.com/in/rchllvelasco/" target="_blank">LinkedIn</a>
-                            </li>
-                            <li><a class="dropdown-item" href="https://github.com/itschellay" target="_blank">Github</a></li>
-                            <li><a class="dropdown-item" href="https://facebook.com/rochellevlsc" target="_blank">Facebook</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-    </nav>
+    <div id="nav-placeholder"></div>
 
     <div class="container-fluid">
         <div class="row">
             <div class="background">
                 <div class="container text-white p-5 mt-5   ">
                     <div class="row">
-                        <div class="col-12" style="text-align: left; color: rgb(59, 57, 57);">
-                            <h1>Let's turn your ideas into reality</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error eaque, mollitia a
-                                similique,
-                                autem <br> accusantium delectus ullam consequuntur minus quis voluptatum. Vel, fugit
-                                recusandae
-                                voluptatum <br> nam maxime deleniti dicta minus!</p>
+                        <div class="col-12 mb-2" style="text-align: left; color: rgb(59, 57, 57);">
+                            HELLO!
+                            <h1>I'm Rochelle<br>Velasco</h1>
+                            Web Developer
+                        </div>
+                        <div class="button-container">
+                            <button type="button" class="btn rounded-5 w-auto border-dark"
+                                style="background-color: #FCDC73;">HIRE ME</button>
+                            <button type="button" class="btn rounded-5 w-auto border-dark"
+                                style="background-color: #E76268;">MY WORKS</button>
+                        </div>
+                        <div class="contacts m-3">
+                            <a href="https://github.com/itschellay"> <img src="images/github.png" style="width: 20px">
+                            </a>
+                            <a href="https://www.linkedin.com/in/rchllvelasco/"> <img src="images/linkedin.png" style="width: 20px">
+                            </a>
+                            <a href="https://facebook.com/rochellevlsc"> <img src="images/facebook.png" style="width: 20px">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -93,6 +69,16 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script>
+        const loadNav = async () => {
+            const response = await fetch('navbar.html');
+            const navbarHtml = await response.text();
+            document.getElementById('nav-placeholder').innerHTML = navbarHtml;
+        };
+
+        loadNav();
+    </script>
 </body>
 
 </html>
