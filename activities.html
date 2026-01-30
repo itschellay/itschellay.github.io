@@ -35,15 +35,15 @@
             var link = "https://itschellay.github.io/" + activities[i].repo + "/";
             content.innerHTML += `
                     <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-                    <div class="card my-3 rounded-3 overflow-hidden">
+                    <div class="card my-3 rounded-3 overflow-hidden h-100">
                         <embed type="text/html" src="` + link + `" width="100%" height="200px">
-                        <div class="card-body shadow-lg">
+                        <div class="card-body shadow-lg d-flex flex-column">
                         <h6 class="card-title">` + activities[i].title + `</h6>
                         <p class="card-text text-body-secondary">` + activities[i].description + `</p>
-                        <a href="` + link + `" alt="` + activities[i].title + `" class="btn btn-primary">Open</a>
+                        <a href="` + link + `" alt="` + activities[i].title + `" class="btn btn-primary mt-auto">Open</a>
                          </div>
                     </div>
-                    </div>
+                    </div> 
                 `;
         }
     </script>

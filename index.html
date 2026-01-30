@@ -38,7 +38,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="background">
+            <div class="background" id="background">
                 <div class="container text-white p-5 mt-5   ">
                     <div class="row">
                         <div class="col-12 mb-2" style="text-align: left; color: rgb(59, 57, 57);">
@@ -53,11 +53,14 @@
                                 style="background-color: #E76268;">MY WORKS</button>
                         </div>
                         <div class="contacts m-3">
-                            <a href="https://github.com/itschellay" target="blank"> <img src="images/github.png" style="width: 20px">
+                            <a href="https://github.com/itschellay" target="blank"> <img src="images/github.png"
+                                    style="width: 20px">
                             </a>
-                            <a href="https://www.linkedin.com/in/rchllvelasco/" target="blank"> <img src="images/linkedin.png" style="width: 20px">
+                            <a href="https://www.linkedin.com/in/rchllvelasco/" target="blank"> <img
+                                    src="images/linkedin.png" style="width: 20px">
                             </a>
-                            <a href="https://facebook.com/rochellevlsc" target="blank"> <img src="images/facebook.png" style="width: 20px">
+                            <a href="https://facebook.com/rochellevlsc" target="blank"> <img src="images/facebook.png"
+                                    style="width: 20px">
                             </a>
                         </div>
                     </div>
@@ -71,6 +74,14 @@
         crossorigin="anonymous"></script>
 
     <script>
+        // function mode() {
+        //     var background = document.getElementById("background");
+        //     background.style.backgroundColor = "black";
+
+        //     var logo = document.getElementById("rvLogo");
+        //     logo.src = "images/Velasco_LogoW.svg";
+        // }
+
         const loadNav = async () => {
             const response = await fetch('navbar.html');
             const navbarHtml = await response.text();
