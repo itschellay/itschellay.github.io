@@ -13,15 +13,15 @@
 
 <style>
     .sub-text {
-        font-size: 0.65rem;
         letter-spacing: 2px;
         color: #b1b1b2;
         margin-top: -0.5rem;
     }
 
-    .container-fluid {
+    .container {
         width: 100%;
-        font-family: 'Inter', sans-serif;;
+        font-family: 'Inter', sans-serif;
+        font-weight: 500;
     }
 
     .background {
@@ -32,25 +32,28 @@
         height: 553px;
         width: 100%;
     }
+
+    footer {
+            background: #1a1a1a;
+            color: #ccc;
+            padding: 45px 0;
+        }
 </style>
 
 <body>
     <div id="nav-placeholder"></div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
             <div class="container text-white p-5 mt-5   ">
                 <div class="row text-center">
-                    <div class="col-12 mb-2" style="color: rgb(59, 57, 57);">
-                        HELLO!
-                        <h1>I'm Rochelle Velasco</h1>
-                        Web Developer
+                    <div class="col-12 mb-2 display-4 fw-bold" style="color: rgb(59, 57, 57);">
+                        HI!
+                        I'm Rochelle Velasco
+                        <p class="lead text-secondary">Information Technology Student</p>
                     </div>
                     <div class="button-container">
-                        <button type="button" class="btn rounded-5 w-auto border-dark"
-                            style="background-color: #FCDC73;">HIRE ME</button>
-                        <button type="button" class="btn rounded-5 w-auto border-dark"
-                            style="background-color: #E76268;">MY WORKS</button>
+                        <a href="#projects" class="btn btn-dark btn-lg mt-3 px-4">View My Works</a>
                     </div>
                     <div class="contacts m-3">
                         <a href="https://github.com/itschellay" target="blank"> <img src="images/github.png"
@@ -59,7 +62,7 @@
                         <a href="https://www.linkedin.com/in/rchllvelasco/" target="blank"> <img
                                 src="images/linkedin.png" style="width: 20px">
                         </a>
-                        <a href="https://facebook.com/rochellevlsc" target="blank"> <img src="images/facebook.png"
+                        <a href="https://facebook.com/rchllv2" target="blank"> <img src="images/facebook.png"
                                 style="width: 20px">
                         </a>
                     </div>
@@ -68,18 +71,34 @@
         </div>
     </div>
 
+    <!-- <section id="skills">
+        <div class="container text-center">
+            <h2 class="fw-bold mb-5">Skills</h2>
+            <div class="d-flex flex-wrap justify-content-center">
+                
+            </div>
+        </div> -->
+
+    <footer>
+        <div class="container text-center">
+            <h2 class="fw-bold mb-4 text-white">Contact Me</h2>
+            <div class="mt-4">
+                <small class="text-secondary">&copy; 2025 Rochelle Velasco. All Rights Reserved.</small>
+            </div>
+        </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
     <script>
-        // function mode() {
-        //     var background = document.getElementById("background");
-        //     background.style.backgroundColor = "black";
+        function mode() {
+            document.body.style.backgroundColor = "black";
 
-        //     var logo = document.getElementById("rvLogo");
-        //     logo.src = "images/Velasco_LogoW.svg";
-        // }
+            var logo = document.getElementById("rvLogo");
+            logo.src = "images/Velasco_LogoW.svg";
+        }
 
         const loadNav = async () => {
             const response = await fetch('navbar.html');
