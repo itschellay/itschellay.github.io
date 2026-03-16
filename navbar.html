@@ -17,8 +17,8 @@
 </style>
 
 <body>
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container p-1">
+    <nav class="navbar navbar-expand-lg fixed-top bg-white border-bottom">
+        <div class="container p-1"> 
             <a class="rvLogo" href="#home">
                 <img id="rvLogo" src="images/Velasco_LogoB.svg" alt="RV" width="50" height="35" alt="RV">
             </a>
@@ -41,9 +41,9 @@
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="projects.html">Projects</a>
+                        <a class="nav-link" href="#projects">Projects</a>
                     </li>
-                    <button class="btn border-0" onclick="mode()">
+                    <button id="modeToggle" class="btn border-0" onclick="mode()">
                         <img src="images/lightMode.png" style="width: 20px">
                     </button>
             </div>

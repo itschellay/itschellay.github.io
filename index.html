@@ -34,70 +34,121 @@
     }
 
     footer {
-            background: #1a1a1a;
-            color: #ccc;
-            padding: 45px 0;
-        }
+        background: #1a1a1a;
+        color: #ccc;
+        padding: 45px 0;
+    }
 </style>
 
 <body>
     <div id="nav-placeholder"></div>
 
-    <div class="container">
-        <div class="row">
-            <div class="container text-white p-5 mt-5   ">
-                <div class="row text-center">
-                    <div class="col-12 mb-2 display-4 fw-bold" style="color: rgb(59, 57, 57);">
-                        HI!
-                        I'm Rochelle Velasco
-                        <p class="lead text-secondary">Information Technology Student</p>
-                    </div>
-                    <div class="button-container">
-                        <a href="projects.html" class="btn btn-dark btn-lg mt-3 px-4">View My Works</a>
-                    </div>
-                    <div class="contacts m-3">
-                        <a href="https://github.com/itschellay" target="blank"> <img src="images/github.png"
-                                style="width: 20px">
-                        </a>
-                        <a href="https://www.linkedin.com/in/rchllvelasco/" target="blank"> <img
-                                src="images/linkedin.png" style="width: 20px">
-                        </a>
-                        <a href="https://facebook.com/rchllv2" target="blank"> <img src="images/facebook.png"
-                                style="width: 20px">
-                        </a>
-                    </div>
-                </div>
+    <div class="container px-5 mb-5 mt-5" style="padding-top: 100px; scroll-margin-top: 80px;">
+        <div id="home" class="row text-center">
+            <div class="col-12 mb-2 display-4 fw-bold" style="color: rgb(31, 30, 30);">
+                HI, I'm Rochelle Velasco
+                <p class="lead text-secondary">Information Technology Student</p>
+            </div>
+            <div class="mt-4">
+                <a href="projects.html" class="btn btn-dark btn-lg px-4">View My Works</a>
             </div>
         </div>
     </div>
 
-    <!-- <section id="skills">
-        <div class="container text-center">
-            <h2 class="fw-bold mb-5">Skills</h2>
-            <div class="d-flex flex-wrap justify-content-center">
-                
+    <div id="about" class="container text-center text-dark mt-5 py-5" style="scroll-margin-top: 80px;">
+        <h2 class="fw-bold mb-4">About Me</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <p>I am a passionate IT student focused on building clean, functional, and user-centered
+                    digital
+                    experiences. I enjoy solving complex problems through code and continuous learning.
+                </p>
             </div>
-        </div> -->
+        </div>
+    </div>
+
+    <div id="services" class="container py-5" style="scroll-margin-top: 80px;">
+        <h2 class="text-center fw-bold mb-5">Services</h2>
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-4 text-center">
+                <h4>Web Development</h4>
+                <p class="text-muted">Creating responsive and modern websites.</p>
+            </div>
+            <div class="col-md-4 text-center">
+                <h4>Technical Support</h4>
+                <p class="text-muted">Assisting with software and hardware troubleshooting.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="skills" class="container text-center py-5" style="scroll-margin-top: 80px;">
+        <h2 class="fw-bold mb-5">Skills</h2>
+        <div class="d-flex flex-wrap justify-content-center gap-2">
+            <span class="badge rounded-pill bg-dark text-white px-3 py-3">HTML/CSS</span>
+            <span class="badge rounded-pill bg-dark text-white px-3 py-3">JavaScript</span>
+            <span class="badge rounded-pill bg-dark text-white px-3 py-3">PHP</span>
+            <span class="badge rounded-pill bg-dark text-white px-3 py-3">Bootstrap</span>
+            <span class="badge rounded-pill bg-dark text-white px-3 py-3">MySQL</span>
+        </div>
+    </div>
+
+    <div id="projects" class="container py-5" style="scroll-margin-top: 80px;">
+        <h2 class="text-center fw-bold mb-5">Projects</h2>
+        <div class="row g-4" id="content">
+
+        </div>
+    </div>
 
     <footer>
         <div class="container text-center">
-            <h2 class="fw-bold mb-4 text-white">Contact Me</h2>
-            <div class="mt-4">
+            <div class="contacts m-3">
+                <a href="https://github.com/itschellay" target="blank"> <img src="images/github.png"
+                        style="width: 20px">
+                </a>
+                <a href="https://www.linkedin.com/in/rchllvelasco/" target="blank"> <img src="images/linkedin.png"
+                        style="width: 20px">
+                </a>
+                <a href="https://facebook.com/rchllv2" target="blank"> <img src="images/facebook.png"
+                        style="width: 20px">
+                </a>
+            </div>
+            <div class="mt-2">
                 <small class="text-secondary">&copy; 2025 Rochelle Velasco. All Rights Reserved.</small>
             </div>
         </div>
     </footer>
+
+    <script src="acts.js"></script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
 
     <script>
-        function mode() {
-            document.body.style.backgroundColor = "black";
+        // function mode() {
+        //     document.body.style.backgroundColor = "black";
 
+        //     var logo = document.getElementById("rvLogo");
+        //     logo.src = "images/Velasco_LogoW.svg";
+        // }
+
+        function mode() {
+            var body = document.body;
             var logo = document.getElementById("rvLogo");
-            logo.src = "images/Velasco_LogoW.svg";
+            var modeToggle = document.getElementById("modeToggle");
+
+            if (document.body.style.backgroundColor === "black") {
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                modeToggle.src = "images/darkMode.png";
+                logo.src = "images/Velasco_LogoB.svg";
+            } else {
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                modeToggle.src = "images/lightMode.png";
+                logo.src = "images/Velasco_LogoW.svg";
+            }
         }
 
         const loadNav = async () => {
@@ -107,6 +158,23 @@
         };
 
         loadNav();
+
+        var content = document.getElementById("content");
+
+        for (var i = 0; i < activities.length; i++) {
+            var link = "https://itschellay.github.io/" + activities[i].repo + "/";
+            content.innerHTML += `
+                <div class="col-md-6">
+                <div class="card h-100 p-4">
+                <h3>` + activities[i].title + `</h3>
+                <p class="text-muted">` + activities[i].description + `
+                </p>
+                <a href="`+ link + `" class="text-dark fw-bold">View
+                    →</a>
+                </div>
+                </div>
+                `;
+        }
     </script>
 </body>
 
