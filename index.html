@@ -133,23 +133,23 @@
         //     logo.src = "images/Velasco_LogoW.svg";
         // }
 
-        function mode() {
-            var body = document.body;
-            var logo = document.getElementById("rvLogo");
-            var modeToggle = document.getElementById("modeToggle");
+        // function mode() {
+        //     var body = document.body;
+        //     var logo = document.getElementById("rvLogo");
+        //     var modeToggle = document.getElementById("modeToggle");
 
-            if (document.body.style.backgroundColor === "black") {
-                document.body.style.backgroundColor = "white";
-                document.body.style.color = "black";
-                modeToggle.src = "images/darkMode.png";
-                logo.src = "images/Velasco_LogoB.svg";
-            } else {
-                document.body.style.backgroundColor = "black";
-                document.body.style.color = "white";
-                modeToggle.src = "images/lightMode.png";
-                logo.src = "images/Velasco_LogoW.svg";
-            }
-        }
+        //     if (document.body.style.backgroundColor === "black") {
+        //         document.body.style.backgroundColor = "white";
+        //         document.body.style.color = "black";
+        //         modeToggle.src = "images/darkMode.png";
+        //         logo.src = "images/Velasco_LogoB.svg";
+        //     } else {
+        //         document.body.style.backgroundColor = "black";
+        //         document.body.style.color = "white";
+        //         modeToggle.src = "images/lightMode.png";
+        //         logo.src = "images/Velasco_LogoW.svg";
+        //     }
+        // }
 
         const loadNav = async () => {
             const response = await fetch('navbar.html');
